@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love you soo muchhh Swarupa</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fbc2eb, #3b72d1);
+      font-family: 'Courier New', monospace;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .typewriter-container {
+  display: inline-block;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+    .typewriter-text {
+      display: inline-block;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 1.5em;
+      animation: typing 5s steps(60, end), blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: transparent }
+      50% { border-color: white }
+    }
+
+    img {
+      margin-top: 40px;
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      border: 5px solid white;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 40px;
+      color: white;
+      background: #e75480;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      background: #ffb6c1;
+    }
+  </style>
+</head>
+    <body>
+  <h1>Swaruu,</h1>
+  <div id="message" style="font-size: 1.5em; color: white;"></div>
+
+  <script>
+    const lines = [
+      "I love you a lott. 💖",
+      "You're not only my love you're a part of me 💗.",
+      "Whenever I look into my future I see you standing by my side, holding my hands. 👫,🤝💖",
+      "There're many times I couldn't give you what you want, many times I hurt you. 😔",
+      "Although I don't hurt you intentionally, but still I should be careful.",
+      "I will careful about what to do when.",
+      "I always want to make our relationship fill with excitement. It should never get boring.",
+      "I always want to make you feel special. You should be the happiest person with me.",
+      "My love will be always special for you. Don't worry.",
+      "I'm with you in every situataion and in every stage you need mee. You just stand I'm with you. You're not alone. 🤝💖",
+      "And about your future...",
+      "It's not only yours. It's ours. And we both will male sure It'd be the most beautiful one.",
+      "I love you Swaru, Missing you a lot 💗",
+    ];
+
+    let currentLine = 0;
+    const messageDiv = document.getElementById("message");
+
+    function typeLine(text, i = 0) {
+      if (i < text.length) {
+        messageDiv.innerHTML += text.charAt(i);
+        setTimeout(() => typeLine(text, i + 1), 50);
+      } else {
+        messageDiv.innerHTML += "<br>";
+        currentLine++;
+        if (currentLine < lines.length) {
+          setTimeout(() => typeLine(lines[currentLine]), 500);
+        }
+      }
+    }
+
+    // Start typing
+    typeLine(lines[currentLine]);
+  </script>
+  <div>
+    <img src="https://www.designbolts.com/wp-content/uploads/2020/01/couple-915984-1.jpg" alt="Sorry image">
+  </div>
+
+  <a href="index.html">⬅ Back to Buttons</a>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swarupa 💗</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive;
+      overflow-x: hidden;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px #bb377d;
+    }
+
+    .button {
+      background: white;
+      color: #e75480;
+      border: none;
+      padding: 15px 30px;
+      margin: 20px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background-color: #ffe4ec;
+      transform: scale(1.05);
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      top: 100vh;
+      animation: floatHeart 8s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { left: -10px; top: 0; }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My love, Swaruu 💗</h1>
+  <p> This for you.</p>
+
+  <button class="button" onclick="location.href='message1.html'">💌 A note for youhh</button>
+  <button class="button" onclick="location.href='message3.html'">🌸 Our plans...</button>
+  <button class="button" onclick="location.href='message2.html'">💖 Our dream destinations...</button>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 10000);
+    }
+
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
